@@ -1,0 +1,3 @@
+bkfk_landing_homepage:
+    pattern:  /
+    defaults: { _controller: BkfkLandingBundle:Default:index }
