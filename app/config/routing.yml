@@ -1,0 +1,4 @@
+bkfk_landing:
+    resource: "@BkfkLandingBundle/Resources/config/routing.yml"
+    prefix:   /
+
