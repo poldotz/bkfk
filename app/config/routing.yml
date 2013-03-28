@@ -1,3 +1,7 @@
+bkfk_store:
+    resource: "@BkfkStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
 bkfk_landing:
     resource: "@BkfkLandingBundle/Resources/config/routing.yml"
     prefix:   /
