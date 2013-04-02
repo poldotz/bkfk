@@ -1,0 +1,3 @@
+bkfk_store_homepage:
+    pattern:  /
+    defaults: { _controller: BkfkStoreBundle:Default:index }

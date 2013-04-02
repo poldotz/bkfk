@@ -30,7 +30,6 @@ class Category
 
     /**
      * @Gedmo\Translatable
-     * @Gedmo\Sluggable
      * @ORM\Column(name="title", type="string", length=64)
      */
     private $title;
@@ -75,24 +74,24 @@ class Category
 
     /**
      * @Gedmo\Translatable
-     * @Gedmo\Slug
+     * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(name="slug", type="string", length=128)
      */
     private $slug;
 
     /**
-     * @var date $created
+     * @var datetime $created
      *
-     * @ODM\Date
      * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
      */
     private $created;
 
     /**
-     * @var date $updated
+     * @var datetime $updated
      *
-     * @ODM\Date
-     * @Gedmo\Timestampable
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
      */
     private $updated;
 }

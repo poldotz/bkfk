@@ -1,4 +1,3 @@
-
 {
     "name": "symfony/framework-standard-edition",
     "description": "The \"Symfony Standard Edition\" distribution",
@@ -25,7 +24,9 @@
         "knplabs/knp-menu-bundle": "1.1.x-dev",
         "knplabs/knp-paginator-bundle": "v2.3.2",
         "doctrine/doctrine-migrations-bundle": "dev-master",
-        "stof/doctrine-extensions-bundle": "dev-master"
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "willdurand/geocoder-bundle": "1.2.3",
+        "kriswallsmith/buzz": "v0.9"
     },
 
     "scripts": {

@@ -1,34 +1,27 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: lpodda
- * Date: 3/28/13
- * Time: 10:34 AM
- * To change this template use File | Settings | File Templates.
- */
 
 namespace Bkfk\StoreBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="resources")
- * use repository for handy tree functions
+ * Resource
+ * @ORM\Table()
  * @ORM\Entity(repositoryClass="Bkfk\StoreBundle\Entity\ResourceRepository")
  */
-class Resource {
-
+class Resource
+{
     /**
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    protected $id;
+    private $id;
 
     /**
+     *
      * @Gedmo\Translatable
-     * @Gedmo\Sluggable
      * @ORM\Column(name="name", type="string", length=64)
      */
     protected $name;
@@ -54,25 +47,33 @@ class Resource {
 
     /**
      * @Gedmo\Translatable
-     * @Gedmo\Slug
+     * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(name="slug", type="string", length=128)
      */
     private $slug;
 
     /**
-     * @var date $created
+     * @var datetime $created
      *
-     * @ODM\Date
      * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
      */
     private $created;
 
     /**
-     * @var date $updated
+     * @var datetime $updated
      *
-     * @ODM\Date
-     * @Gedmo\Timestampable
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
      */
     private $updated;
 
+     /* Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }
