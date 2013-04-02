@@ -34,7 +34,7 @@ assetic:
     filters:
         less:
             node: /usr/local/bin/node
-            node_paths: [/home/poldotz/node_modules]
+            node_paths: [/usr/local/lib/node_modules]
             apply_to: "\.less$"
         cssrewrite: ~
         #closure:
@@ -81,6 +81,7 @@ doctrine:
         user:     %database_user%
         password: %database_password%
         charset:  UTF8
+
         # if using pdo_sqlite as your database driver, add the path in parameters.yml
         # e.g. database_path: %kernel.root_dir%/data/data.db3
         # path:     %database_path%
