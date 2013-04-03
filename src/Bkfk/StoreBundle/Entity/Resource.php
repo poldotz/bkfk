@@ -19,11 +19,11 @@ class Resource
      */
     private $id;
 
+
     /**
-     * @ORM\Column(name="location",type="point")
+     * @ORM\Column(type="point")
      */
     private $location;
-
 
     /**
      *
@@ -88,29 +88,6 @@ class Resource
     public function __construct()
     {
         $this->children = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
-    /**
-     * Set location
-     *
-     * @param \point $location
-     * @return Resource
-     */
-    public function setLocation(\point $location)
-    {
-        $this->location = $location;
-    
-        return $this;
-    }
-
-    /**
-     * Get location
-     *
-     * @return \point 
-     */
-    public function getLocation()
-    {
-        return $this->location;
     }
 
     /**
@@ -282,5 +259,28 @@ class Resource
     public function getChildren()
     {
         return $this->children;
+    }
+
+    /**
+     * Set location
+     *
+     * @param point $location
+     * @return Resource
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+    
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return point 
+     */
+    public function getLocation()
+    {
+        return $this->location;
     }
 }
