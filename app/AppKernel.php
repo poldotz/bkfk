@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Bazinga\Bundle\GeocoderBundle\BazingaGeocoderBundle(),
             new Bkfk\StoreBundle\BkfkStoreBundle(),
+            new Bkfk\UserBundle\BkfkUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

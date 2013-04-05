@@ -27,7 +27,8 @@
         "stof/doctrine-extensions-bundle": "dev-master",
         "willdurand/geocoder-bundle": "1.2.3",
         "kriswallsmith/buzz": "v0.9",
-        "creof/doctrine2-spatial":  "dev-master"
+        "creof/doctrine2-spatial":  "dev-master",
+        "friendsofsymfony/user-bundle": "dev-master"
 
     },
 

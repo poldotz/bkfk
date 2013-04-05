@@ -102,6 +102,20 @@ doctrine:
         mappings:
             StofDoctrineExtensionsBundle: ~
   # Swiftmailer Configuration
+
+security:
+    encoders:
+        Bkfk\UserBundle\Entity\User:
+            algorithm:        sha1
+            encode_as_base64: false
+            iterations:       1
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH ]
+
+
+
 services:
   geocoder.adapter:
     class:  Geocoder\HttpAdapter\BuzzHttpAdapter

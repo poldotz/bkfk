@@ -1,3 +1,8 @@
+bkfk_user:
+    resource: "@BkfkUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 bkfk_store:
     resource: "@BkfkStoreBundle/Resources/config/routing.yml"
     prefix:   /store
